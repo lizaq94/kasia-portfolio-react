@@ -17,9 +17,9 @@ const SectionWrapper = styled.div`
   text-align: center;
 `;
 
-const ViewWrapper = ({ children, color }) => {
+const ViewWrapper = ({ children, color, isFull }) => {
   return (
-    <Wrapper color={color}>
+    <Wrapper color={color} isFull={isFull}>
       <SectionWrapper>{children}</SectionWrapper>
     </Wrapper>
   );
