@@ -1,10 +1,11 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle } from 'assets/styles/GlobalStyle';
 import { theme } from 'assets/styles/theme';
 import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import HomePage from './HomePage';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AboutPage from './AboutPage';
 
 const Root = () => {
   return (
@@ -13,8 +14,11 @@ const Root = () => {
         <GlobalStyle />
         <MainTemplate>
           <Switch>
-            <Route path="/">
-              <HomePage></HomePage>
+            <Route exact path="/">
+              <HomePage />
+            </Route>
+            <Route path="/about">
+              <AboutPage />
             </Route>
           </Switch>
         </MainTemplate>

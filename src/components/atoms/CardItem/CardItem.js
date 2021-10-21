@@ -12,6 +12,7 @@ const Wrapper = styled.div`
 
   &:last-of-type {
     border-bottom: none;
+    padding-bottom: 4.8rem;
   }
 `;
 
@@ -21,7 +22,8 @@ const LeftSide = styled.div`
 const RightSide = styled.div`
   color: ${({ theme }) => theme.colors.primaryBlue};
   font-weight: 600;
-  padding-left: 0.5rem;
+  text-align: right;
+  width: 50%;
 `;
 
 const CardItem = ({ label, value = '-' }) => {

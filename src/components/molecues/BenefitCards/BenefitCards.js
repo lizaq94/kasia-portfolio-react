@@ -14,10 +14,6 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 2.4rem 0;
-
-  ${BenefitItem} {
-    flex: 1;
-  }
 `;
 
 const BenefitCards = () => {
