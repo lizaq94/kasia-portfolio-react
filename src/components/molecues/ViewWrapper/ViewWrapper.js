@@ -11,7 +11,6 @@ const Wrapper = styled.div`
 
 const SectionWrapper = styled.div`
   width: 102.4rem;
-  border: 1px solid red;
   display: flex;
   flex-direction: column;
   align-items: center;

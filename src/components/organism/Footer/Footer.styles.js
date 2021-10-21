@@ -6,22 +6,20 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 2.4rem 0;
+  padding: 6.4rem 0;
+  border-top: 2px solid #e6e6e6;
 `;
 
-export const StyledLogo = styled(NavLink)`
-  font-size: 2.4rem;
+export const StyledLogo = styled.div`
+  font-size: 2rem;
   font-weight: 600;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
-  width: 50%;
-  text-decoration: none;
-  color: black;
-  transition: transform 0.2s linear;
 
-  &:hover {
-    transform-origin: center;
-    transform: scale(1.01);
+  span {
+    font-weight: 400;
+    color: #0d0d0d;
+    opacity: 0.64;
   }
 `;
 
@@ -60,21 +58,8 @@ export const StyledLink = styled(NavLink)`
     z-index: 1000;
   }
 
-  &:last-of-type::after {
-    display: none;
-  }
-
   &:hover&::after {
     left: 0;
     opacity: 1;
   }
-`;
-
-export const SpecialStyledLink = styled(StyledLink)`
-  padding: 1.8rem 2.4rem;
-  background: ${({ theme }) => theme.colors.primaryBlue};
-  text-transform: uppercase;
-  color: white;
-  border-radius: 1.2rem;
-  display: inline-block;
 `;

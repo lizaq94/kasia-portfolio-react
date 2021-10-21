@@ -8,4 +8,10 @@ export const SecondTitle = styled.h2`
   letter-spacing: -0.03em;
   text-transform: uppercase;
   text-align: center;
+  white-space: pre-wrap;
+`;
+
+export const SecondTitleLowerCase = styled(SecondTitle)`
+  padding-top: 10rem;
+  text-transform: none;
 `;

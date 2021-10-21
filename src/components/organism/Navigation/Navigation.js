@@ -4,9 +4,9 @@ import { Wrapper, StyledLogo, StyledNav, StyledLink, SpecialStyledLink } from '.
 const Navigation = () => {
   return (
     <Wrapper>
-      <StyledLogo>Kasia Domagała</StyledLogo>
+      <StyledLogo to="/">Kasia Domagała</StyledLogo>
       <StyledNav>
-        <StyledLink to="#">O mnie</StyledLink>
+        <StyledLink to="/about">O mnie</StyledLink>
         <StyledLink to="#">Oferta</StyledLink>
         <StyledLink to="#">Cennik</StyledLink>
         <StyledLink to="#">Kontakt</StyledLink>

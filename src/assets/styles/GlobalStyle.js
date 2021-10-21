@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     html {
         font-size: 62.5%;
         box-sizing: border-box;
+        overflow-x: hidden;
     }
 
     *, *::before, *::after {
