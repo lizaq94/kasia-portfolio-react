@@ -8,6 +8,7 @@ import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import OfferPage from './OfferPage';
 import PriceListPage from './PriceListPage';
+import ContactPage from './ContactPage';
 
 const Root = () => {
   return (
@@ -29,7 +30,7 @@ const Root = () => {
               <PriceListPage />
             </Route>
             <Route path="/contact">
-              <PriceListPage />
+              <ContactPage />
             </Route>
           </Switch>
         </MainTemplate>
