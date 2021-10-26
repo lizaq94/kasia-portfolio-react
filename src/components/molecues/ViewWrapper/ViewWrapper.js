@@ -10,7 +10,8 @@ const Wrapper = styled.div`
 `;
 
 const SectionWrapper = styled.div`
-  width: 102.4rem;
+  width: 100%;
+  max-width: 102.4rem;
   display: flex;
   flex-direction: column;
   align-items: center;

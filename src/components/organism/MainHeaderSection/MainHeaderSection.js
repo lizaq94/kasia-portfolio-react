@@ -2,6 +2,7 @@ import React from 'react';
 import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
 import { StyledList, StyledListItem, Wrapper } from './MainHeaderSection.styles';
 import { Button } from 'components/atoms/Button/Button';
+import { Link } from 'react-router-dom';
 
 const MainHeaderSection = () => {
   return (
@@ -18,7 +19,9 @@ const MainHeaderSection = () => {
       </StyledList>
       <div>
         <Button isPrimary>Testowa kampania</Button>
-        <Button>Mam pytanie</Button>
+        <Link to="/contact">
+          <Button>Mam pytanie</Button>
+        </Link>
       </div>
     </Wrapper>
   );

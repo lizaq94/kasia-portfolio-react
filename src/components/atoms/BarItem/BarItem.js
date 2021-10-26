@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 export const Wrapper = styled.div`
   flex: 1;
-  max-width: 15.2rem;
+  max-width: 19.35rem;
 `;
 export const BarItemContent = styled.div`
   width: 100%;
@@ -17,12 +17,24 @@ export const BarItemContent = styled.div`
   background-color: ${({ isActive }) => (isActive ? ({ theme }) => theme.colors.primaryBlue : '#f2f2f2')};
 `;
 
+export const StyledBarItemContent = styled(BarItemContent)`
+  color: black;
+  background-color: ${({ isActive }) => (isActive ? ({ theme }) => theme.colors.white : '#f2f2f2')};
+`;
+
 const BarItem = (props) => {
+  console.log(props.color);
   return (
     <Wrapper {...props}>
-      <BarItemContent id={props.id} isActive={props.isActive}>
-        {props.children}
-      </BarItemContent>
+      {props.isWhite ? (
+        <StyledBarItemContent id={props.id} isActive={props.isActive}>
+          {props.children}
+        </StyledBarItemContent>
+      ) : (
+        <BarItemContent id={props.id} isActive={props.isActive}>
+          {props.children}
+        </BarItemContent>
+      )}
     </Wrapper>
   );
 };

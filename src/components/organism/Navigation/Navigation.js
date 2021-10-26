@@ -10,7 +10,7 @@ const Navigation = () => {
         <StyledLink to="/offer">Oferta</StyledLink>
         <StyledLink to="/price">Cennik</StyledLink>
         <StyledLink to="/contact">Kontakt</StyledLink>
-        <SpecialStyledLink to="#">Darmowa wycena</SpecialStyledLink>
+        <SpecialStyledLink to="/free-pricing">Darmowa wycena</SpecialStyledLink>
       </StyledNav>
     </Wrapper>
   );

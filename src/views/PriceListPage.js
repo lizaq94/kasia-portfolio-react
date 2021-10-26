@@ -31,7 +31,7 @@ const PriceListPage = () => {
           </HeaderParagraph>
         </HeaderSection>
         <PriceCardSection color={'lightGrey'} height={'90%'}>
-          <InfoSection buttonText={'Chce darmową wycenę'} marginBottom={'0'}>
+          <InfoSection buttonText={'Chce darmową wycenę'} marginBottom={'0'} pathButton={'/free-pricing'}>
             <InfoParagraph>
               Pakiet Test, Start, Plus nie wpisują się w Twoje wymagania? Poproś o darmową wycenę, dzięki której zostanie stworzony pakiet
               indywidualny, idealnie dostosowany do Twoich potrzeb

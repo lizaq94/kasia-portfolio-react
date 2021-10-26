@@ -14,7 +14,7 @@ const HomePage = () => {
         <MainHeaderSection />
       </ViewWrapper>
       <ViewWrapper color={'lightGrey'}>
-        <Section title={'Kiedy warto zdecydować się na\nkampanie reklamową na facebooku?'} isButton={'Dowiedz się więcej'}>
+        <Section title={'Kiedy warto zdecydować się na\nkampanie reklamową na facebooku?'} isButton={'Dowiedz się więcej'} path={'/offer'}>
           Działania reklamowe w social mediach są w stanie przynieść korzyści każdej firmy na wielu różnych płaszczyznach. Sprawdzą się zarówno w
           sytuacjach wprowadzenia nowego produktu na rynek przez renomowane marki, jak również w przypadku budowania swojej obecności w sieci przez
           nowo-powstałe marki. Każdy moment rozwoju marki jest odpowiedni, aby rozpocząć kampanię reklamową na Facebooku i Instagramie.

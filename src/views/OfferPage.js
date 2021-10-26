@@ -12,7 +12,7 @@ const OfferPage = () => {
   return (
     <>
       <ViewWrapper>
-        <HeaderSection title={'Kampanie reklamowe na \n facebooku i instagramie'} isButton={'Zobacz cennik'}>
+        <HeaderSection title={'Kampanie reklamowe na \n facebooku i instagramie'} isButton={'Zobacz cennik'} pathButton={'/price'}>
           <HeaderParagraph>
             System reklamowy Facebook jest potężnym narzędziem, który <br /> pozwala osiągnąć cele biznesowe na wielu różnych płaszczyznach.
           </HeaderParagraph>
