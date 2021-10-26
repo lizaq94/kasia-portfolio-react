@@ -7,6 +7,7 @@ import MainTemplate from 'components/templates/MainTemplate/MainTemplate';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import OfferPage from './OfferPage';
+import PriceListPage from './PriceListPage';
 
 const Root = () => {
   return (
@@ -23,6 +24,12 @@ const Root = () => {
             </Route>
             <Route path="/offer">
               <OfferPage />
+            </Route>
+            <Route path="/price">
+              <PriceListPage />
+            </Route>
+            <Route path="/contact">
+              <PriceListPage />
             </Route>
           </Switch>
         </MainTemplate>

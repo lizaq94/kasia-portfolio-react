@@ -26,4 +26,8 @@ export const StyledListItem = styled.li`
   line-height: 2rem;
   letter-spacing: -0.03em;
   margin-bottom: 2.4rem;
+
+  &:last-of-type {
+    margin-bottom: 4rem;
+  }
 `;
