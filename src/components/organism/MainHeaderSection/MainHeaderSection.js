@@ -12,7 +12,7 @@ const MainHeaderSection = () => {
       <StyledList>
         <StyledListItem>Współpraca całkowicie zdalna</StyledListItem>
         <StyledListItem>Testowa kampania już od 99zł</StyledListItem>
-        <StyledListItem>MożStyledListItemwość otrzymania Darmowej wyceny bez żadnych zobowiązań</StyledListItem>
+        <StyledListItem>Możliwość otrzymania Darmowej wyceny bez żadnych zobowiązań</StyledListItem>
         <StyledListItem>Start kampani nawet w 24H</StyledListItem>
         <StyledListItem>5-letnie doświadczenie w prowadzeniu kampani e-marketingowych</StyledListItem>
       </StyledList>
