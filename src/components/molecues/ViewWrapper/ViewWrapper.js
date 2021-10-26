@@ -19,7 +19,7 @@ const SectionWrapper = styled.div`
 
 const ViewWrapper = ({ children, color, isFull }) => {
   return (
-    <Wrapper color={color} isFull={isFull}>
+    <Wrapper color={color}>
       <SectionWrapper>{children}</SectionWrapper>
     </Wrapper>
   );

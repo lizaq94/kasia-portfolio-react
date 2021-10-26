@@ -11,4 +11,9 @@ export const Button = styled.button`
   font-size: 1.8rem;
   display: inline-block;
   cursor: pointer;
+  transition: transform 0.2s linear;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 `;

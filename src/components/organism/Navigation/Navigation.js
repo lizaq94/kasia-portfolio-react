@@ -7,9 +7,9 @@ const Navigation = () => {
       <StyledLogo to="/">Kasia Domagała</StyledLogo>
       <StyledNav>
         <StyledLink to="/about">O mnie</StyledLink>
-        <StyledLink to="#">Oferta</StyledLink>
-        <StyledLink to="#">Cennik</StyledLink>
-        <StyledLink to="#">Kontakt</StyledLink>
+        <StyledLink to="/offer">Oferta</StyledLink>
+        <StyledLink to="/price">Cennik</StyledLink>
+        <StyledLink to="/contact">Kontakt</StyledLink>
         <SpecialStyledLink to="#">Darmowa wycena</SpecialStyledLink>
       </StyledNav>
     </Wrapper>
