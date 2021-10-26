@@ -9,6 +9,7 @@ import AboutPage from './AboutPage';
 import OfferPage from './OfferPage';
 import PriceListPage from './PriceListPage';
 import ContactPage from './ContactPage';
+import FreePricingPage from './FreePricingPage';
 
 const Root = () => {
   return (
@@ -31,6 +32,9 @@ const Root = () => {
             </Route>
             <Route path="/contact">
               <ContactPage />
+            </Route>
+            <Route path="/free-pricing">
+              <FreePricingPage />
             </Route>
           </Switch>
         </MainTemplate>

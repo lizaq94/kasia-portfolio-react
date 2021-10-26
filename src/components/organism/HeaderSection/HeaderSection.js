@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Button } from 'components/atoms/Button/Button';
 import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   ${MainTitle} {
@@ -9,12 +10,16 @@ const Wrapper = styled.div`
   }
 `;
 
-const HeaderSection = ({ title, children, isButton, marginTop }) => {
+const HeaderSection = ({ title, children, isButton, marginTop, pathButton = '' }) => {
   return (
     <Wrapper marginTop={marginTop}>
       <MainTitle>{title}</MainTitle>
       {children}
-      {isButton ? <Button isPrimary>{isButton}</Button> : null}
+      {isButton ? (
+        <Link to={pathButton}>
+          <Button isPrimary>{isButton}</Button>
+        </Link>
+      ) : null}
     </Wrapper>
   );
 };

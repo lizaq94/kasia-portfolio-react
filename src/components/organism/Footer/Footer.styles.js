@@ -3,12 +3,17 @@ import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
   bottom: 0;
-  width: 128rem;
+  width: 100%;
+  max-width: 128rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 6.4rem 0;
   border-top: 2px solid #e6e6e6;
+
+  @media (max-width: 1280px) {
+    max-width: 102.4rem;
+  }
 `;
 
 export const StyledLogo = styled.div`

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'components/atoms/Button/Button';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -8,11 +9,13 @@ const Wrapper = styled.div`
   padding: 0 2rem;
 `;
 
-const InfoSection = ({ children, buttonText, marginBottom }) => {
+const InfoSection = ({ children, buttonText, marginBottom, pathButton = '' }) => {
   return (
     <Wrapper marginBottom={marginBottom}>
       {children}
-      <Button isPrimary>{buttonText}</Button>
+      <Link to={pathButton}>
+        <Button isPrimary>{buttonText}</Button>
+      </Link>
     </Wrapper>
   );
 };
