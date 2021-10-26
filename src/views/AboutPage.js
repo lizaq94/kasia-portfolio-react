@@ -1,27 +1,27 @@
-import { Button } from 'components/atoms/Button/Button';
-import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
-import ViewWrapper from 'components/molecues/ViewWrapper/ViewWrapper';
 import React from 'react';
+import HeaderSection from 'components/organism/HeaderSection/HeaderSection';
+import { HeaderParagraph } from 'components/atoms/HeaderParagraph/HeaderParagraph';
 import styled from 'styled-components';
 
-const Paragraph = styled.p`
-  font-size: 22px;
-  line-height: 48px;
-  letter-spacing: -0.03em;
-`;
+const Wrapper = styled.div`
+  width: 128rem;
 
+  h1 {
+    text-align: left;
+  }
+`;
 const AboutPage = () => {
   return (
-    <ViewWrapper>
-      <MainTitle>Cześć, nazywam się Kasia Domagała</MainTitle>
-      <Paragraph>
-        Pracuję jako Digital Marketing Manager. Posiadam wieloletnie doświadczenie w prowadzeniu kampanie e-marketingowych. Pracowałam zarówno w
-        agencjach reklamowych, jak i bezpośrednio po stronie klienta. Centrum moich zainteresowań są działania reklamowe na Facebooku i Instagramie i
-        wyłącznie na nich obecnie się skupiam. Planuje i optymalizuje kampanie, które realizują konkretne cele biznesowe.
-      </Paragraph>
-      <Paragraph>Sprawdź, co mogę zrobić właśnie dla Ciebie.</Paragraph>
-      <Button isPrimary>Sprawdź</Button>
-    </ViewWrapper>
+    <Wrapper>
+      <HeaderSection title={'Cześć, nazywam się Kasia Domagała'} isButton={'Sprawdź'} marginTop={'-10rem'}>
+        <HeaderParagraph>
+          Pracuję jako Digital Marketing Manager. Posiadam wieloletnie doświadczenie w prowadzeniu kampanie e-marketingowych. Pracowałam zarówno w
+          agencjach reklamowych, jak i bezpośrednio po stronie klienta. Centrum moich zainteresowań są działania reklamowe na Facebooku i Instagramie
+          i wyłącznie na nich obecnie się skupiam. Planuje i optymalizuje kampanie, które realizują konkretne cele biznesowe.
+        </HeaderParagraph>
+        <HeaderParagraph>Sprawdź, co mogę zrobić właśnie dla Ciebie.</HeaderParagraph>
+      </HeaderSection>
+    </Wrapper>
   );
 };
 

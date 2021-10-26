@@ -7,4 +7,5 @@ export const MainTitle = styled.h1`
   letter-spacing: -0.03em;
   text-align: center;
   margin: 0;
+  white-space: pre-wrap;
 `;

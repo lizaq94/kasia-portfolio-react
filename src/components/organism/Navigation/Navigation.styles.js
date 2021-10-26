@@ -32,7 +32,8 @@ export const StyledNav = styled.nav`
   align-items: center;
 `;
 
-export const StyledLink = styled(NavLink)`
+const activeClassName = 'active-link';
+export const StyledLink = styled(NavLink).attrs({ activeClassName })`
   font-size: ${({ theme }) => theme.fontSize.s};
   font-weight: 400;
   line-height: 1.8rem;
@@ -47,6 +48,13 @@ export const StyledLink = styled(NavLink)`
 
   &:last-of-type {
     margin-right: 0;
+  }
+
+  &.${activeClassName} {
+    &::after {
+      opacity: 1;
+      left: 0;
+    }
   }
 
   &::after {
