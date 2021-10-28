@@ -14,6 +14,9 @@ export const Wrapper = styled.div`
   @media (max-width: 800px) {
     margin-bottom: 3rem;
   }
+  @media (max-width: 700px) {
+    margin-bottom: 1rem;
+  }
 
   svg {
     margin-right: 1.6rem;

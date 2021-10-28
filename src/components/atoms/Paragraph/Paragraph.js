@@ -5,6 +5,9 @@ export const Paragraph = styled.p`
   font-weight: 500;
   line-height: 3.4rem;
   margin: 3.2rem 0 4rem 0;
+  @media (max-width: 700px) {
+    padding: 0rem 1rem;
+  }
 `;
 
 export const InfoParagraph = styled(Paragraph)`

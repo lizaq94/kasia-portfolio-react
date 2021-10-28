@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom';
 const Wrapper = styled.div`
   width: 100%;
   padding-top: 6rem;
+
+  @media (max-width: 700px) {
+    padding: 6rem 4.6rem;
+  }
 `;
 
 const Section = ({ title, isButton, children, path = '' }) => {

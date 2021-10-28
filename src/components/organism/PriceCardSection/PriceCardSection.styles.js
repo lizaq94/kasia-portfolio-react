@@ -4,17 +4,20 @@ export const Wrapper = styled.div`
   width: 128rem;
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
   position: relative;
   z-index: 1000;
   padding-top: 4rem;
   margin-bottom: 11%;
 
   @media (max-width: 1280px) {
-    width: 115rem;
+    width: 110%;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1150px) and (min-width: 1024px) {
+    width: 100%;
+  }
+
+  @media (max-width: 1024px) and (min-width: 800px) {
     width: 95%;
   }
 

@@ -13,4 +13,8 @@ export const SecondTitle = styled.h2`
 export const SecondTitleLowerCase = styled(SecondTitle)`
   padding-top: 10rem;
   text-transform: none;
+
+  @media (max-width: 700px) {
+    padding: 6rem 5rem 0 5rem;
+  }
 `;

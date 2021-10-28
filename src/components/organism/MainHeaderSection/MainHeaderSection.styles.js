@@ -8,6 +8,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 700px) {
+    padding: 10rem 4.6rem;
+  }
+
   ${Button} {
     margin-right: 1.6rem;
   }
