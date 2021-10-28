@@ -17,6 +17,10 @@ const Wrapper = styled.div`
   ${Title} {
     font-size: 3.2rem;
   }
+
+  @media (max-width: 1024px) {
+    width: 100%;
+  }
 `;
 
 const IconWrapper = styled.div`

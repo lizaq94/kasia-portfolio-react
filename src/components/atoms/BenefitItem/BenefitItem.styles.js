@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding: 3rem 2rem;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
 `;
 
 export const StyledParagraph = styled.div`

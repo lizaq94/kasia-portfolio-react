@@ -14,6 +14,14 @@ export const Wrapper = styled.div`
   @media (max-width: 1280px) {
     max-width: 102.4rem;
   }
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+  }
+  @media (max-width: 800px) {
+    justify-content: space-around;
+    padding: 3rem 0;
+  }
 `;
 
 export const StyledLogo = styled.div`
@@ -21,6 +29,9 @@ export const StyledLogo = styled.div`
   font-weight: 600;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
+  @media (max-width: 800px) {
+    font-size: 1.6rem;
+  }
 
   span {
     font-weight: 400;
@@ -46,6 +57,12 @@ export const StyledLink = styled(NavLink)`
   padding-bottom: 0.2rem;
   cursor: pointer;
   position: relative;
+
+  @media (max-width: 800px) {
+    font-size: 1.4rem;
+    margin-right: 1rem;
+    text-align: center;
+  }
 
   &:last-of-type {
     margin-right: 0;

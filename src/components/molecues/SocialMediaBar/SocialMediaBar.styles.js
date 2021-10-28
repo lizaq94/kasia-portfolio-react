@@ -12,4 +12,8 @@ export const IconWrapper = styled.div`
   width: 100%;
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 800px) {
+    flex-wrap: wrap;
+  }
 `;

@@ -11,6 +11,10 @@ export const Wrapper = styled.div`
   border-radius: 16px;
   background-color: white;
 
+  @media (max-width: 800px) {
+    margin-bottom: 3rem;
+  }
+
   svg {
     margin-right: 1.6rem;
   }

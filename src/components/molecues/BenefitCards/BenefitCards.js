@@ -14,6 +14,12 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 2.4rem 0;
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
 `;
 
 const BenefitCards = () => {

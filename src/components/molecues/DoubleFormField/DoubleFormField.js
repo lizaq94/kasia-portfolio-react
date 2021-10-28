@@ -6,11 +6,22 @@ const Wrapper = styled.div`
   width: 100%;
   display: flex;
 
+  @media (max-width: 800px) {
+    flex-direction: column;
+  }
+
   div {
     flex: 1;
+    @media (max-width: 800px) {
+      margin-bottom: 3rem;
+    }
 
     &:first-child {
       margin-right: 2rem;
+
+      @media (max-width: 800px) {
+        margin-right: 0;
+      }
     }
   }
 `;
