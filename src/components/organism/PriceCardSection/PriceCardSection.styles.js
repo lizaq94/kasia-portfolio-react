@@ -10,6 +10,21 @@ export const Wrapper = styled.div`
   padding-top: 4rem;
   margin-bottom: 11%;
 
+  @media (max-width: 1280px) {
+    width: 115rem;
+  }
+
+  @media (max-width: 1024px) {
+    width: 95%;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: column;
+    margin-bottom: 0;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -18,5 +33,9 @@ export const Wrapper = styled.div`
     width: 100vw;
     height: ${({ height }) => height || '100%'};
     background-color: ${({ theme, color }) => theme.colors[color] || theme.colors.primaryBlue};
+
+    @media (max-width: 800px) {
+      top: 0%;
+    }
   }
 `;

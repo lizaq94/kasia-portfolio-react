@@ -8,6 +8,12 @@ const Wrapper = styled.div`
   @media (max-width: 1280px) {
     max-width: 102.4rem;
   }
+
+  @media (max-width: 1024px) {
+    max-width: 100%;
+    padding: 0 4rem 3rem 4rem;
+  }
+
   h1 {
     text-align: left;
   }
@@ -15,7 +21,7 @@ const Wrapper = styled.div`
 const AboutPage = () => {
   return (
     <Wrapper>
-      <HeaderSection title={'Cześć, nazywam się Kasia Domagała'} isButton={'Sprawdź'} marginTop={'-10rem'} pathButton={'/offer'}>
+      <HeaderSection title={'Cześć, nazywam się Kasia Domagała'} isButton={'Sprawdź'} marginTop={'7rem'} pathButton={'/offer'}>
         <HeaderParagraph>
           Pracuję jako Digital Marketing Manager. Posiadam wieloletnie doświadczenie w prowadzeniu kampanie e-marketingowych. Pracowałam zarówno w
           agencjach reklamowych, jak i bezpośrednio po stronie klienta. Centrum moich zainteresowań są działania reklamowe na Facebooku i Instagramie

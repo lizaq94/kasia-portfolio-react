@@ -10,20 +10,47 @@ const Wrapper = styled.div`
   padding: 1.6rem 0;
   border-bottom: 1px solid #e6e6e6;
 
+  @media (max-width: 1024px) {
+    font-size: 1.6rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
   &:last-of-type {
     border-bottom: none;
     padding-bottom: 4.8rem;
+
+    @media (max-width: 1024px) {
+      padding-bottom: 2.8rem;
+    }
   }
 `;
 
 const LeftSide = styled.div`
   text-align: left;
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+  @media (max-width: 800px) {
+    text-align: left;
+  }
 `;
 const RightSide = styled.div`
   color: ${({ theme }) => theme.colors.primaryBlue};
   font-weight: 600;
   text-align: right;
   width: 50%;
+  @media (max-width: 1024px) {
+    text-align: center;
+  }
+  @media (max-width: 800px) {
+    text-align: right;
+  }
 `;
 
 const CardItem = ({ label, value = '-' }) => {

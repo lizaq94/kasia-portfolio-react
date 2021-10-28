@@ -7,6 +7,10 @@ export const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
+  @media (max-width: 800px) {
+    max-width: 100%;
+  }
+
   ${Label} {
     font-size: 1.8rem;
   }

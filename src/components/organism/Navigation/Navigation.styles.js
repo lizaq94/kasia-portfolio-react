@@ -2,7 +2,6 @@ import styled from 'styled-components';
 import { NavLink } from 'react-router-dom';
 
 export const Wrapper = styled.div`
-  top: 0;
   justify-self: flex-start;
   width: 100%;
   max-width: 128rem;
@@ -10,11 +9,16 @@ export const Wrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   padding: 2.4rem 0;
+
   @media (max-width: 1280px) {
     max-width: 102.4rem;
   }
   @media (max-width: 1024px) {
-    width: 100%;
+    width: 95%;
+  }
+
+  @media (max-width: 700px) {
+    display: none;
   }
 `;
 
@@ -33,7 +37,7 @@ export const StyledLogo = styled(NavLink)`
     transform: scale(1.01);
   }
   @media (max-width: 1280px) {
-    width: 40%;
+    width: auto;
   }
 `;
 
@@ -55,6 +59,11 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
   padding-bottom: 0.2rem;
   cursor: pointer;
   position: relative;
+
+  @media (max-width: 800px) {
+    font-size: 1.6rem;
+    margin-right: 2rem;
+  }
 
   &:last-of-type {
     margin-right: 0;
