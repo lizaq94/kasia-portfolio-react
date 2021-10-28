@@ -8,6 +8,10 @@ import { Link } from 'react-router-dom';
 
 const Wrapper = styled.div`
   padding: 10.4rem 0;
+
+  @media (max-width: 700px) {
+    padding: 6rem 4.8rem;
+  }
 `;
 
 const BenefitSection = () => {

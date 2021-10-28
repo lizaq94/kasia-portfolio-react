@@ -14,7 +14,9 @@ const Wrapper = styled.div`
   justify-content: center;
   align-items: flex-start;
   padding: 2.4rem 0;
-
+  @media (max-width: 1024px) and (min-width: 800px) {
+    flex-wrap: wrap;
+  }
   @media (max-width: 800px) {
     flex-direction: column;
     justify-content: center;

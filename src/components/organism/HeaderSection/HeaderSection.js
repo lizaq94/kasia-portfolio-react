@@ -8,6 +8,10 @@ const Wrapper = styled.div`
   ${MainTitle} {
     margin: ${({ marginTop }) => marginTop || '9rem'} 0 4rem 0;
   }
+
+  @media (max-width: 700px) {
+    padding: 0rem 5rem;
+  }
 `;
 
 const HeaderSection = ({ title, children, isButton, marginTop, pathButton = '' }) => {
