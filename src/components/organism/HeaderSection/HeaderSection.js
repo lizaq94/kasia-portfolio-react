@@ -9,7 +9,7 @@ const Wrapper = styled.div`
     margin: ${({ marginTop }) => marginTop || '9rem'} 0 4rem 0;
   }
 
-  @media (max-width: 700px) {
+  @media (max-width: 800px) {
     padding: 0rem 5rem;
   }
 `;

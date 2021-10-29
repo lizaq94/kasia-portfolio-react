@@ -9,11 +9,11 @@ export const Wrapper = styled.div`
   align-items: center;
 
   @media (max-width: 700px) {
-    padding: 10rem 4.6rem;
+    padding: 10rem 5rem;
   }
 
-  ${Button} {
-    margin-right: 1.6rem;
+  @media (max-width: 425px) {
+    padding: 5rem;
   }
 `;
 
@@ -31,7 +31,20 @@ export const StyledListItem = styled.li`
   letter-spacing: -0.03em;
   margin-bottom: 2.4rem;
 
+  @media (max-width: 425px) {
+    font-size: ${({ theme }) => theme.fontSize.s};
+    margin-bottom: 2rem;
+  }
+
   &:last-of-type {
     margin-bottom: 4rem;
+  }
+`;
+
+export const StyledButton = styled(Button)`
+  margin-right: 1.6rem;
+
+  @media (max-width: 425px) {
+    margin: 0 0 1rem 0;
   }
 `;

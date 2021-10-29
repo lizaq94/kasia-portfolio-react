@@ -21,6 +21,12 @@ const Wrapper = styled.div`
     justify-content: space-between;
   }
 
+  @media (max-width: 425px) {
+    font-size: 1.5rem;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   &:last-of-type {
     border-bottom: none;
     padding-bottom: 4.8rem;
@@ -33,11 +39,18 @@ const Wrapper = styled.div`
 
 const LeftSide = styled.div`
   text-align: left;
+
   @media (max-width: 1024px) {
+    margin-bottom: 1rem;
     text-align: center;
   }
   @media (max-width: 800px) {
+    margin-bottom: 0;
     text-align: left;
+  }
+  @media (max-width: 425px) {
+    margin-bottom: 1rem;
+    text-align: center;
   }
 `;
 const RightSide = styled.div`
@@ -45,11 +58,15 @@ const RightSide = styled.div`
   font-weight: 600;
   text-align: right;
   width: 50%;
+
   @media (max-width: 1024px) {
     text-align: center;
   }
   @media (max-width: 800px) {
     text-align: right;
+  }
+  @media (max-width: 425px) {
+    text-align: center;
   }
 `;
 

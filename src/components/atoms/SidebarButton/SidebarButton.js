@@ -12,8 +12,8 @@ export const SidebarButton = styled.button`
     top: 10px;
     left: 10px;
     overflow: hidden;
-    background-color: ${({ theme }) => theme.colors.primaryBlue};
-    border: 2px solid ${({ theme }) => theme.colors.primaryBlue};
+    background-color: ${({ theme }) => theme.colors.white};
+    border: 2px solid ${({ theme }) => theme.colors.white};
     border-radius: 0.4rem;
 
     span {
@@ -34,7 +34,7 @@ export const SidebarButton = styled.button`
         content: '';
         width: 1.75rem;
         height: 0.3rem;
-        background-color: white;
+        background-color: ${({ theme }) => theme.colors.primaryBlue};
         position: absolute;
         left: 50%;
       }
@@ -58,7 +58,7 @@ export const SidebarButton = styled.button`
         content: '';
         width: 3rem;
         height: 0.3rem;
-        background-color: white;
+        background-color: ${({ theme }) => theme.colors.primaryBlue};
         position: absolute;
         top: 50%;
         left: 50%;

@@ -3,15 +3,16 @@ import PriceCard from 'components/molecues/PriceCard/PriceCard';
 import { priceCardsInfo } from 'data/data';
 import { Wrapper } from './PriceCardSection.styles';
 
-const PriceCardSection = ({ children, color, height }) => {
+const PriceCardSection = ({ color, height }) => {
   return (
-    <Wrapper color={color} height={height}>
-      {priceCardsInfo.map((data) => (
-        <PriceCard isPrice value={data} key={data.name} />
-      ))}
-      <PriceCard />
-      {children}
-    </Wrapper>
+    <>
+      <Wrapper color={color} height={height}>
+        {priceCardsInfo.map((data) => (
+          <PriceCard isPrice value={data} key={data.name} />
+        ))}
+        <PriceCard />
+      </Wrapper>
+    </>
   );
 };
 

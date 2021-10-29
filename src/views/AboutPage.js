@@ -5,17 +5,24 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
   width: 128rem;
+  padding-bottom: 3rem;
   @media (max-width: 1280px) {
     max-width: 102.4rem;
   }
 
   @media (max-width: 1024px) {
     max-width: 100%;
-    padding: 0 4rem 3rem 4rem;
+    padding-bottom: 3rem;
   }
 
   h1 {
     text-align: left;
+  }
+
+  ${HeaderParagraph} {
+    @media (max-width: 800px) {
+      padding: 0;
+    }
   }
 `;
 const AboutPage = () => {

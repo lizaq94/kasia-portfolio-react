@@ -1,11 +1,10 @@
 import React from 'react';
 import Navigation from 'components/organism/Navigation/Navigation';
 import Footer from 'components/organism/Footer/Footer';
-
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 100%;
+  max-width: 100%;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,6 +15,7 @@ const Wrapper = styled.div`
 const MainTemplate = ({ children }) => {
   const now = new Date();
   const year = now.getFullYear();
+
   return (
     <Wrapper>
       <Navigation />

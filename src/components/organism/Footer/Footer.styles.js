@@ -22,6 +22,13 @@ export const Wrapper = styled.div`
     justify-content: space-around;
     padding: 3rem 0;
   }
+  @media (max-width: 700px) {
+    flex-direction: column;
+  }
+  @media (max-width: 500px) {
+    align-items: flex-start;
+    padding: 3rem 5rem;
+  }
 `;
 
 export const StyledLogo = styled.div`
@@ -29,8 +36,13 @@ export const StyledLogo = styled.div`
   font-weight: 600;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
+
   @media (max-width: 800px) {
     font-size: 1.6rem;
+  }
+
+  @media (max-width: 700px) {
+    margin-bottom: 1rem;
   }
 
   span {
@@ -43,6 +55,11 @@ export const StyledLogo = styled.div`
 export const StyledNav = styled.nav`
   display: flex;
   align-items: center;
+
+  @media (max-width: 500px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 `;
 
 export const StyledLink = styled(NavLink)`
@@ -64,25 +81,11 @@ export const StyledLink = styled(NavLink)`
     text-align: center;
   }
 
+  @media (max-width: 500px) {
+    padding: 0.5rem;
+  }
+
   &:last-of-type {
     margin-right: 0;
-  }
-
-  &::after {
-    content: '';
-    width: 100%;
-    height: 0.2rem;
-    position: absolute;
-    bottom: 0;
-    left: -100%;
-    background-color: ${({ theme }) => theme.colors.primaryBlue};
-    opacity: 0;
-    transition: 0.2s left, 0.2s opacity;
-    z-index: 1000;
-  }
-
-  &:hover&::after {
-    left: 0;
-    opacity: 1;
   }
 `;

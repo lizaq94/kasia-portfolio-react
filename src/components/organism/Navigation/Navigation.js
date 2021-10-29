@@ -8,6 +8,7 @@ const Navigation = () => {
 
   const hideSidebar = () => {
     setIsOpen(false);
+    window.scrollTo(0, 0);
   };
   return (
     <>

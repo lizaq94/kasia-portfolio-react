@@ -20,10 +20,17 @@ export const Wrapper = styled.div`
     margin: 2rem 20%;
   }
 
+  @media (max-width: 425px) {
+    margin: 2rem 15%;
+  }
+
   &:last-of-type {
     margin-right: 0;
     @media (max-width: 800px) {
       margin: 2rem 20%;
+    }
+    @media (max-width: 425px) {
+      margin: 2rem 15%;
     }
   }
 `;
@@ -31,6 +38,10 @@ export const Title = styled.div`
   font-size: 2rem;
   padding-bottom: 2.4rem;
   text-align: left;
+
+  @media (max-width: 425px) {
+    text-align: center;
+  }
 `;
 export const PriceItem = styled.div`
   font-size: 1.6rem;
@@ -41,6 +52,9 @@ export const PriceItem = styled.div`
   @media (max-width: 1024px) {
     padding-bottom: 2rem;
   }
+  @media (max-width: 425px) {
+    justify-content: center;
+  }
 
   span {
     width: 60%;
@@ -50,6 +64,10 @@ export const PriceItem = styled.div`
 
     @media (max-width: 1280px) and (min-width: 800px) {
       width: 80%;
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 425px) {
       font-size: 1.8rem;
     }
   }
@@ -63,6 +81,11 @@ export const PriceItemBig = styled(PriceItem)`
 
     @media (max-width: 1024px) {
       font-size: 4rem;
+    }
+
+    @media (max-width: 425px) {
+      padding-right: 1rem;
+      font-size: 3.5rem;
     }
   }
 `;

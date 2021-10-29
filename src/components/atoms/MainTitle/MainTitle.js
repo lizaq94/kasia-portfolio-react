@@ -8,4 +8,8 @@ export const MainTitle = styled.h1`
   text-align: center;
   margin: 0;
   white-space: pre-wrap;
+
+  @media (max-width: 425px) {
+    font-size: 4.6rem;
+  }
 `;

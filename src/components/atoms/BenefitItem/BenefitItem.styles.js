@@ -11,6 +11,13 @@ export const Wrapper = styled.div`
   @media (max-width: 800px) {
     width: 100%;
   }
+
+  svg {
+    @media (max-width: 425px) {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
 `;
 
 export const StyledParagraph = styled.div`
@@ -19,4 +26,8 @@ export const StyledParagraph = styled.div`
   line-height: 3.2rem;
   letter-spacing: -0.02em;
   padding-top: 3.2rem;
+
+  @media (max-width: 425px) {
+    font-size: 1.8rem;
+  }
 `;

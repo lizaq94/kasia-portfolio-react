@@ -1,6 +1,6 @@
 import React from 'react';
 import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
-import { StyledList, StyledListItem, Wrapper } from './MainHeaderSection.styles';
+import { StyledList, StyledListItem, Wrapper, StyledButton } from './MainHeaderSection.styles';
 import { Button } from 'components/atoms/Button/Button';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const MainHeaderSection = () => {
         <StyledListItem>5-letnie doświadczenie w prowadzeniu kampani e-marketingowych</StyledListItem>
       </StyledList>
       <div>
-        <Button isPrimary>Testowa kampania</Button>
+        <StyledButton isPrimary>Testowa kampania</StyledButton>
         <Link to="/contact">
           <Button>Mam pytanie</Button>
         </Link>

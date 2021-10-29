@@ -12,15 +12,12 @@ const Wrapper = styled.div`
 
   div {
     flex: 1;
-    @media (max-width: 800px) {
-      margin-bottom: 3rem;
-    }
 
     &:first-child {
       margin-right: 2rem;
 
       @media (max-width: 800px) {
-        margin-right: 0;
+        margin: 0 0 3rem 0;
       }
     }
   }

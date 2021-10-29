@@ -30,7 +30,12 @@ export const Wrapper = styled.div`
       display: flex;
       flex-direction: column;
       align-items: center;
-      font-size: ${({ theme }) => theme.fontSize.xl};
+      font-size: ${({ theme }) => theme.fontSize.l};
+      padding: 4rem 0;
+
+      @media (max-width: 425px) {
+        font-size: 3rem;
+      }
     }
   }
 `;
@@ -42,6 +47,10 @@ export const StyledLink = styled(NavLink).attrs({ activeClassName })`
   color: black;
   padding: 2rem;
   text-align: center;
+
+  @media (max-width: 425px) {
+    padding: 1.8rem;
+  }
 
   &.${activeClassName} {
     background-color: ${({ theme }) => theme.colors.primaryBlue};
