@@ -11,6 +11,11 @@ export const Wrapper = styled.div`
     max-width: 100%;
   }
 
+  @media (max-width: 500px) {
+    // eslint-disable-next-line
+    display: none;
+  }
+
   ${Label} {
     font-size: 1.8rem;
   }

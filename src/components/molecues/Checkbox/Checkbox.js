@@ -15,6 +15,18 @@ const Checmark = styled.span`
   cursor: pointer;
   transition: all 0.3s;
 
+  @media (max-width: 425px) {
+    left: -3rem;
+    width: 2.2rem;
+    height: 2.2rem;
+  }
+
+  @media (max-width: 375px) {
+    left: -3rem;
+    width: 2.1rem;
+    height: 2.1rem;
+  }
+
   &::after {
     content: '';
     position: absolute;
@@ -26,6 +38,10 @@ const Checmark = styled.span`
     border-width: 0 3px 3px 0;
     transform: rotate(45deg);
     display: none;
+
+    @media (max-width: 375px) {
+      left: 0.9rem;
+    }
   }
 `;
 
@@ -34,6 +50,12 @@ const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 425px) {
+    font-size: 1.2rem;
+    justify-content: center;
+    text-align: center;
+  }
 
   ${Input} {
     opacity: 0;
@@ -54,6 +76,13 @@ const Wrapper = styled.div`
     font-weight: 400;
     cursor: pointer;
     padding: 0;
+    @media (max-width: 425px) {
+      font-size: 1.4rem;
+    }
+
+    @media (max-width: 375px) {
+      font-size: 1.3rem;
+    }
   }
 `;
 
