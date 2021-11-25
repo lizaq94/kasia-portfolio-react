@@ -10,6 +10,7 @@ const PriceCardSection = ({ color, height }) => {
         {priceCardsInfo.map((data) => (
           <PriceCard isPrice value={data} key={data.name} />
         ))}
+
         <PriceCard />
       </Wrapper>
     </>

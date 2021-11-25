@@ -4,6 +4,7 @@ import { SecondTitle } from 'components/atoms/SecondTitle/SecondTitle';
 import { Paragraph } from 'components/atoms/Paragraph/Paragraph';
 import { Button } from 'components/atoms/Button/Button';
 import { Link } from 'react-router-dom';
+import { resetScroll } from '../../../utilities/resetScroll';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -20,7 +21,7 @@ const Section = ({ title, isButton, children, path = '' }) => {
       <SecondTitle>{title}</SecondTitle>
       <Paragraph>{children}</Paragraph>
       {isButton ? (
-        <Link to={path}>
+        <Link to={path} onClick={resetScroll}>
           <Button isPrimary>{isButton}</Button>
         </Link>
       ) : null}

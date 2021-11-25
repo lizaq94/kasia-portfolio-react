@@ -30,11 +30,11 @@ const customStyles = {
   }),
 };
 
-const SelectPackage = ({ options, placeholder, label }) => {
+const SelectPackage = ({ name, options, placeholder, label }) => {
   return (
     <Wrapper>
       <Label>{label}</Label>
-      <Select options={options} styles={customStyles} placeholder={placeholder} />
+      <Select name={name} options={options} styles={customStyles} placeholder={placeholder} />
     </Wrapper>
   );
 };

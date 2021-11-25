@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import FormField from 'components/molecues/FormField/FormField';
 import Checkbox from 'components/molecues/Checkbox/Checkbox';
 import SendButton from 'components/atoms/SendButton/SendButton';
@@ -6,8 +6,11 @@ import DoubleFormField from 'components/molecues/DoubleFormField/DoubleFormField
 import PackageSelectionBar from 'components/molecues/PackageSelectionBar/PackageSelectionBar';
 import { Wrapper } from 'components/organism/ContactForm/ContactForm.styles';
 import SelectPackage from '../../molecues/SelectPackage/SelectPackage';
+import { AppContext } from '../../../AppContext';
 
 const FreePricingForm = () => {
+  const { numberOfCampaignsSelection, setNumberOfCampaignsSelection, campaignBudgetSelection, setCampaignBudgetSelection } = useContext(AppContext);
+
   const numberOfCampaigns = [
     { value: '1-2', label: '1-2' },
     { value: '3-4', label: '3-4' },
@@ -34,11 +37,19 @@ const FreePricingForm = () => {
         id={'page'}
         placeholder={'Adres strony internetowej / Facebooka'}
       />
-      <PackageSelectionBar label={'Przewidywana liczba kampani'} items={['1-2', '3-4', '5-6', 'Więcej niż 6']} isWhite />
+      <PackageSelectionBar
+        label={'Przewidywana liczba kampani'}
+        items={numberOfCampaigns}
+        inputValue={numberOfCampaignsSelection}
+        handleInputChange={setNumberOfCampaignsSelection}
+        isWhite
+      />
       <SelectPackage label={'Przewidywana liczba kampani'} options={numberOfCampaigns} placeholder={'Wybierz ilość kampanii'} />
       <PackageSelectionBar
         label={'Przewidywany miesięczny budżet reklamowy'}
-        items={['100-500zł', '500-1000zł', '1000-5000zł', 'Więcej niż 5000zł']}
+        items={campaignBudget}
+        inputValue={campaignBudgetSelection}
+        handleInputChange={setCampaignBudgetSelection}
         isWhite
       />
       <SelectPackage label={'Przewidywany miesięczny budżet reklamowy'} options={campaignBudget} placeholder={'Wybierz budżet kampanii'} />

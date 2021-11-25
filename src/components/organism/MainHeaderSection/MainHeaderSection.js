@@ -3,6 +3,7 @@ import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
 import { StyledList, StyledListItem, Wrapper, StyledButton } from './MainHeaderSection.styles';
 import { Button } from 'components/atoms/Button/Button';
 import { Link } from 'react-router-dom';
+import { resetScroll } from '../../../utilities/resetScroll';
 
 const MainHeaderSection = () => {
   return (
@@ -19,7 +20,7 @@ const MainHeaderSection = () => {
       </StyledList>
       <div>
         <StyledButton isPrimary>Testowa kampania</StyledButton>
-        <Link to="/contact">
+        <Link to="/contact" onClick={resetScroll}>
           <Button>Mam pytanie</Button>
         </Link>
       </div>

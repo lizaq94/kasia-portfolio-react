@@ -23,11 +23,10 @@ export const StyledBarItemContent = styled(BarItemContent)`
 `;
 
 const BarItem = (props) => {
-  console.log(props.color);
   return (
     <Wrapper {...props}>
       {props.isWhite ? (
-        <StyledBarItemContent id={props.id} isActive={props.isActive}>
+        <StyledBarItemContent value={props.value} id={props.id} isActive={props.isActive}>
           {props.children}
         </StyledBarItemContent>
       ) : (
