@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Button } from 'components/atoms/Button/Button';
 import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
 import { Link } from 'react-router-dom';
+import { resetScroll } from '../../../utilities/resetScroll';
 
 const Wrapper = styled.div`
   ${MainTitle} {
@@ -20,7 +21,7 @@ const HeaderSection = ({ title, children, isButton, marginTop, pathButton = '' }
       <MainTitle>{title}</MainTitle>
       {children}
       {isButton ? (
-        <Link to={pathButton}>
+        <Link to={pathButton} onClick={resetScroll}>
           <Button isPrimary>{isButton}</Button>
         </Link>
       ) : null}

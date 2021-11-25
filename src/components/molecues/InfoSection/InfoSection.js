@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Button } from 'components/atoms/Button/Button';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { resetScroll } from '../../../utilities/resetScroll';
+import { AppContext } from '../../../AppContext';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -14,10 +16,20 @@ const Wrapper = styled.div`
 `;
 
 const InfoSection = ({ children, buttonText, marginBottom, marginTop, pathButton = '' }) => {
+  const { setPackageSelection } = useContext(AppContext);
+
   return (
     <Wrapper marginBottom={marginBottom} marginTop={marginTop}>
       {children}
-      <Link to={pathButton}>
+      <Link
+        to={pathButton}
+        onClick={() => {
+          resetScroll();
+          if (pathButton === '/contact') {
+            setPackageSelection({ selected: 0, value: 'Test' });
+          }
+        }}
+      >
         <Button isPrimary>{buttonText}</Button>
       </Link>
     </Wrapper>

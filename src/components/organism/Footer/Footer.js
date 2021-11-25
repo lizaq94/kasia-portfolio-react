@@ -1,9 +1,6 @@
 import React from 'react';
 import { Wrapper, StyledLogo, StyledNav, StyledLink } from './Footer.styles';
-
-const resetScroll = () => {
-  window.scrollTo(0, 0);
-};
+import { resetScroll } from '../../../utilities/resetScroll';
 
 const Footer = ({ year }) => {
   return (
