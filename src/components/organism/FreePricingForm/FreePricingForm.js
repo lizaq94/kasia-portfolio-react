@@ -7,9 +7,13 @@ import PackageSelectionBar from 'components/molecues/PackageSelectionBar/Package
 import { Wrapper } from 'components/organism/ContactForm/ContactForm.styles';
 import SelectPackage from '../../molecues/SelectPackage/SelectPackage';
 import { AppContext } from '../../../AppContext';
+import { useOnMobile } from '../../../utilities/useOnMobile';
+import { useSendEmail } from '../../../utilities/useSendEmail';
 
 const FreePricingForm = () => {
   const { numberOfCampaignsSelection, setNumberOfCampaignsSelection, campaignBudgetSelection, setCampaignBudgetSelection } = useContext(AppContext);
+  const { isMobile } = useOnMobile();
+  const { form, sendEmail } = useSendEmail();
 
   const numberOfCampaigns = [
     { value: '1-2', label: '1-2' },
@@ -26,7 +30,7 @@ const FreePricingForm = () => {
   ];
 
   return (
-    <Wrapper>
+    <Wrapper ref={form} onSubmit={(e) => sendEmail(e, process.env.REACT_APP_TEMPLATE_FREE_PRICING_ID, form)}>
       <DoubleFormField
         firstField={{ label: 'Imię*', placeholder: 'Podaj swoje imię', type: 'text', name: 'name' }}
         secondField={{ label: 'Email*', placeholder: 'Podaj swój adres email', type: 'email', name: 'email' }}
@@ -37,22 +41,41 @@ const FreePricingForm = () => {
         id={'page'}
         placeholder={'Adres strony internetowej / Facebooka'}
       />
-      <PackageSelectionBar
-        label={'Przewidywana liczba kampani'}
-        items={numberOfCampaigns}
-        inputValue={numberOfCampaignsSelection}
-        handleInputChange={setNumberOfCampaignsSelection}
-        isWhite
-      />
-      <SelectPackage label={'Przewidywana liczba kampani'} options={numberOfCampaigns} placeholder={'Wybierz ilość kampanii'} />
-      <PackageSelectionBar
-        label={'Przewidywany miesięczny budżet reklamowy'}
-        items={campaignBudget}
-        inputValue={campaignBudgetSelection}
-        handleInputChange={setCampaignBudgetSelection}
-        isWhite
-      />
-      <SelectPackage label={'Przewidywany miesięczny budżet reklamowy'} options={campaignBudget} placeholder={'Wybierz budżet kampanii'} />
+      {isMobile ? (
+        <>
+          <SelectPackage
+            name={'numberOfCampaignsSelectBar'}
+            label={'Przewidywana liczba kampani'}
+            options={numberOfCampaigns}
+            placeholder={'Wybierz ilość kampanii'}
+          />
+          <SelectPackage
+            name={'campaignBudgetSelectBar'}
+            label={'Przewidywany miesięczny budżet reklamowy'}
+            options={campaignBudget}
+            placeholder={'Wybierz budżet kampanii'}
+          />
+        </>
+      ) : (
+        <>
+          <PackageSelectionBar
+            name={'numberOfCampaignsSelectBar'}
+            label={'Przewidywana liczba kampani'}
+            items={numberOfCampaigns}
+            inputValue={numberOfCampaignsSelection}
+            handleInputChange={setNumberOfCampaignsSelection}
+            isWhite
+          />{' '}
+          <PackageSelectionBar
+            name={'campaignBudgetSelectBar'}
+            label={'Przewidywany miesięczny budżet reklamowy'}
+            items={campaignBudget}
+            inputValue={campaignBudgetSelection}
+            handleInputChange={setCampaignBudgetSelection}
+            isWhite
+          />
+        </>
+      )}
 
       <FormField isTextarea label={'Wiadomość*'} name={'message'} id={'message'} />
       <Checkbox name={'privacyPolitics'} id={'privacyPolitics'} label={'Przeczytałem i akceptuje politykę prywatności'} />

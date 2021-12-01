@@ -1,18 +1,18 @@
 import { createContext, useState } from 'react';
 
 export const AppContext = createContext({
-  packageSelection: 0,
+  packageSelection: '',
   setPackageSelection: () => {},
-  numberOfCampaignsSelection: 0,
+  numberOfCampaignsSelection: '',
   setNumberOfCampaignsSelection: () => {},
-  campaignBudgetSelection: 0,
+  campaignBudgetSelection: '',
   setCampaignBudgetSelection: () => {},
 });
 
 export const AppContextProvider = ({ children }) => {
-  const [packageSelection, setPackageSelection] = useState({ selected: '0', value: 'test' });
-  const [numberOfCampaignsSelection, setNumberOfCampaignsSelection] = useState({ selected: '0', value: '1-2' });
-  const [campaignBudgetSelection, setCampaignBudgetSelection] = useState({ selected: '0', value: '100-500' });
+  const [packageSelection, setPackageSelection] = useState('test');
+  const [numberOfCampaignsSelection, setNumberOfCampaignsSelection] = useState('1-2');
+  const [campaignBudgetSelection, setCampaignBudgetSelection] = useState('100-500');
 
   return (
     <AppContext.Provider
