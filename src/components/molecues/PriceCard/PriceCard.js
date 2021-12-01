@@ -30,7 +30,8 @@ const PriceCard = ({ value = priceIndividual, isPrice }) => {
         to="/contact"
         onClick={() => {
           resetScroll();
-          setPackageSelection({ selected: value.id, value: value.value });
+          console.log('priceCard', value.value);
+          setPackageSelection(value.value);
         }}
       >
         <Button isPrimary>Wybieram</Button>

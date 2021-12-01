@@ -5,14 +5,10 @@ import { Label } from '../../atoms/Label/Label';
 import Select from 'react-select';
 
 const Wrapper = styled.div`
-  display: none;
+  display: flex;
   flex-direction: column;
   width: 100%;
   text-align: left;
-
-  @media (max-width: 500px) {
-    display: flex;
-  }
 `;
 
 const customStyles = {

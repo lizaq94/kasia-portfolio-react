@@ -38,5 +38,5 @@ export const priceIndividual = {
   numberCampaigns: '-',
   budget: '-',
   duration: '-',
-  value: 'individual ',
+  value: 'individual',
 };
