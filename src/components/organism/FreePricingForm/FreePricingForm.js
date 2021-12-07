@@ -30,58 +30,59 @@ const FreePricingForm = () => {
   ];
 
   return (
-    <Wrapper ref={form} onSubmit={(e) => sendEmail(e, process.env.REACT_APP_TEMPLATE_FREE_PRICING_ID, form)}>
-      <DoubleFormField
-        firstField={{ label: 'Imię*', placeholder: 'Podaj swoje imię', type: 'text', name: 'name' }}
-        secondField={{ label: 'Email*', placeholder: 'Podaj swój adres email', type: 'email', name: 'email' }}
-      />
-      <FormField
-        label={'Strona internetowa / Strona na facebooku*'}
-        name={'page'}
-        id={'page'}
-        placeholder={'Adres strony internetowej / Facebooka'}
-      />
-      {isMobile ? (
-        <>
-          <SelectPackage
-            name={'numberOfCampaignsSelectBar'}
-            label={'Przewidywana liczba kampani'}
-            options={numberOfCampaigns}
-            placeholder={'Wybierz ilość kampanii'}
-          />
-          <SelectPackage
-            name={'campaignBudgetSelectBar'}
-            label={'Przewidywany miesięczny budżet reklamowy'}
-            options={campaignBudget}
-            placeholder={'Wybierz budżet kampanii'}
-          />
-        </>
-      ) : (
-        <>
-          <PackageSelectionBar
-            name={'numberOfCampaignsSelectBar'}
-            label={'Przewidywana liczba kampani'}
-            items={numberOfCampaigns}
-            inputValue={numberOfCampaignsSelection}
-            handleInputChange={setNumberOfCampaignsSelection}
-            isWhite
-          />{' '}
-          <PackageSelectionBar
-            name={'campaignBudgetSelectBar'}
-            label={'Przewidywany miesięczny budżet reklamowy'}
-            items={campaignBudget}
-            inputValue={campaignBudgetSelection}
-            handleInputChange={setCampaignBudgetSelection}
-            isWhite
-          />
-        </>
-      )}
-
-      <FormField isTextarea label={'Wiadomość*'} name={'message'} id={'message'} />
-      <Checkbox name={'privacyPolitics'} id={'privacyPolitics'} label={'Przeczytałem i akceptuje politykę prywatności'} />
-      <Checkbox name={'marketingAgree'} id={'marketingAgree'} label={'Wyrażam zgodę na kontakt marketingowy'} />
-      <SendButton buttonText={'Wyślij'} />
-    </Wrapper>
+    <div></div>
+    // <Wrapper ref={form} onSubmit={(e) => sendEmail(e, process.env.REACT_APP_TEMPLATE_FREE_PRICING_ID, form)}>
+    //   <DoubleFormField
+    //     firstField={{ label: 'Imię*', placeholder: 'Podaj swoje imię', type: 'text', name: 'name' }}
+    //     secondField={{ label: 'Email*', placeholder: 'Podaj swój adres email', type: 'email', name: 'email' }}
+    //   />
+    //   <FormField
+    //     label={'Strona internetowa / Strona na facebooku*'}
+    //     name={'page'}
+    //     id={'page'}
+    //     placeholder={'Adres strony internetowej / Facebooka'}
+    //   />
+    //   {isMobile ? (
+    //     <>
+    //       <SelectPackage
+    //         name={'numberOfCampaignsSelectBar'}
+    //         label={'Przewidywana liczba kampani'}
+    //         options={numberOfCampaigns}
+    //         placeholder={'Wybierz ilość kampanii'}
+    //       />
+    //       <SelectPackage
+    //         name={'campaignBudgetSelectBar'}
+    //         label={'Przewidywany miesięczny budżet reklamowy'}
+    //         options={campaignBudget}
+    //         placeholder={'Wybierz budżet kampanii'}
+    //       />
+    //     </>
+    //   ) : (
+    //     <>
+    //       <PackageSelectionBar
+    //         name={'numberOfCampaignsSelectBar'}
+    //         label={'Przewidywana liczba kampani'}
+    //         items={numberOfCampaigns}
+    //         inputValue={numberOfCampaignsSelection}
+    //         handleInputChange={setNumberOfCampaignsSelection}
+    //         isWhite
+    //       />{' '}
+    //       <PackageSelectionBar
+    //         name={'campaignBudgetSelectBar'}
+    //         label={'Przewidywany miesięczny budżet reklamowy'}
+    //         items={campaignBudget}
+    //         inputValue={campaignBudgetSelection}
+    //         handleInputChange={setCampaignBudgetSelection}
+    //         isWhite
+    //       />
+    //     </>
+    //   )}
+    //
+    //   <FormField isTextarea label={'Wiadomość*'} name={'message'} id={'message'} />
+    //   <Checkbox name={'privacyPolitics'} id={'privacyPolitics'} label={'Przeczytałem i akceptuje politykę prywatności'} />
+    //   <Checkbox name={'marketingAgree'} id={'marketingAgree'} label={'Wyrażam zgodę na kontakt marketingowy'} />
+    //   <SendButton buttonText={'Wyślij'} />
+    // </Wrapper>
   );
 };
 

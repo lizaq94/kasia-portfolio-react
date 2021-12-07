@@ -23,16 +23,29 @@ const Wrapper = styled.div`
   }
 `;
 
-const DoubleFormField = ({ firstField = {}, secondField = {} }) => {
+const DoubleFormField = ({ firstField = {}, secondField = {}, register, isRequired, errors }) => {
   return (
     <Wrapper>
-      <FormField label={firstField.label} placeholder={firstField.placeholder} type={firstField.type} id={firstField.name} name={firstField.name} />
+      <FormField
+        label={firstField.label}
+        placeholder={firstField.placeholder}
+        type={firstField.type}
+        id={firstField.name}
+        name={firstField.name}
+        register={register}
+        isRequired={isRequired}
+        errors={errors}
+      />
+
       <FormField
         label={secondField.label}
         placeholder={secondField.placeholder}
         type={secondField.type}
         id={secondField.name}
         name={secondField.name}
+        register={register}
+        isRequired={isRequired}
+        errors={errors}
       />
     </Wrapper>
   );

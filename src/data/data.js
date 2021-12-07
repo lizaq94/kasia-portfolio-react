@@ -7,7 +7,7 @@ export const priceCardsInfo = [
     numberCampaigns: '1',
     budget: '100-200zł',
     duration: '2 Tygodnie',
-    value: 'test',
+    value: 'Test',
   },
   {
     id: 1,
@@ -17,7 +17,7 @@ export const priceCardsInfo = [
     numberCampaigns: 'Do 2',
     budget: '200-500zł',
     duration: 'Dowolny',
-    value: 'start',
+    value: 'Start',
   },
   {
     id: 2,
@@ -27,7 +27,7 @@ export const priceCardsInfo = [
     numberCampaigns: 'Do 4',
     budget: '500-2000zł',
     duration: 'Dowolny',
-    value: 'plus',
+    value: 'Plus',
   },
 ];
 
@@ -38,5 +38,5 @@ export const priceIndividual = {
   numberCampaigns: '-',
   budget: '-',
   duration: '-',
-  value: 'individual',
+  value: 'Indywidualny',
 };

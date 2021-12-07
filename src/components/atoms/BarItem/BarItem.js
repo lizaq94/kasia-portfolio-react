@@ -18,10 +18,17 @@ const Input = styled.input`
   }
 `;
 
-const BarItem = (props) => {
+const BarItem = ({ register, ...props }) => {
   return (
     <>
-      <Input id={props.value} defaultChecked={props.value === props.checkedValue} type="radio" name={props.name} value={props.value} />
+      <Input
+        id={props.value}
+        defaultChecked={props.value === props.checkedValue}
+        type="radio"
+        name={props.name}
+        value={props.value}
+        {...register(props.name)}
+      />
       <Label htmlFor={props.value}>{props.children}</Label>
     </>
   );

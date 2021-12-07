@@ -10,7 +10,7 @@ export const AppContext = createContext({
 });
 
 export const AppContextProvider = ({ children }) => {
-  const [packageSelection, setPackageSelection] = useState('test');
+  const [packageSelection, setPackageSelection] = useState('');
   const [numberOfCampaignsSelection, setNumberOfCampaignsSelection] = useState('1-2');
   const [campaignBudgetSelection, setCampaignBudgetSelection] = useState('100-500');
 
