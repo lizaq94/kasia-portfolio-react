@@ -26,7 +26,7 @@ const InfoSection = ({ children, buttonText, marginBottom, marginTop, pathButton
         onClick={() => {
           resetScroll();
           if (pathButton === '/contact') {
-            setPackageSelection({ selected: 0, value: 'Test' });
+            setPackageSelection('Test');
           }
         }}
       >

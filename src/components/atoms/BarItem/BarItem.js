@@ -13,15 +13,23 @@ const Input = styled.input`
   display: none;
 
   &:checked + ${Label} {
-    color: ${({ theme }) => theme.colors.white};
-    background-color: ${({ theme }) => theme.colors.primaryBlue};
+    color: ${({ isWhite }) => (isWhite ? 'black' : 'white')};
+    background-color: ${({ isWhite }) => (isWhite ? 'white' : ({ theme }) => theme.colors.primaryBlue)};
   }
 `;
 
-const BarItem = (props) => {
+const BarItem = ({ register, ...props }) => {
   return (
     <>
-      <Input id={props.value} defaultChecked={props.value === props.checkedValue} type="radio" name={props.name} value={props.value} />
+      <Input
+        id={props.value}
+        defaultChecked={props.value === props.checkedValue}
+        type="radio"
+        name={props.name}
+        value={props.value}
+        isWhite={props.isWhite}
+        {...register(props.name)}
+      />
       <Label htmlFor={props.value}>{props.children}</Label>
     </>
   );

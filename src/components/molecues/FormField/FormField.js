@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Label } from 'components/atoms/Label/Label';
 import styled from 'styled-components';
 import { Input } from 'components/atoms/Input/Input';
+import { ErrorMessega } from '../../atoms/ErrorMessega/ErrorMessega';
 
 const Wrapper = styled.div`
   display: flex;
@@ -10,14 +11,20 @@ const Wrapper = styled.div`
   align-items: flex-start;
 `;
 
-const FormField = ({ id, label, placeholder, type = 'text', name, isTextarea }) => {
+const FormField = ({ id, label, placeholder, type = 'text', name, isTextarea, register = {}, isRequired = false, errors }) => {
   return (
     <Wrapper>
       <Label htmlFor={id}>{label}</Label>
       {isTextarea ? (
-        <Input isTextarea as="textarea" placeholder={placeholder} type={type} name={name} id={id} />
+        <>
+          <Input isTextarea as="textarea" placeholder={placeholder} type={type} name={name} id={id} {...register(name, { required: isRequired })} />
+          {errors[`${name}`] && <ErrorMessega>To pole jest wymagane</ErrorMessega>}
+        </>
       ) : (
-        <Input placeholder={placeholder} type={type} name={name} id={id} />
+        <>
+          <Input placeholder={placeholder} type={type} nameInput={name} id={id} {...register(name, { required: isRequired })} />
+          {errors[`${name}`] && <ErrorMessega>To pole jest wymagane</ErrorMessega>}
+        </>
       )}
     </Wrapper>
   );

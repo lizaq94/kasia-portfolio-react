@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Label } from '../../atoms/Label/Label';
-
 import Select from 'react-select';
 
 const Wrapper = styled.div`
@@ -26,11 +25,11 @@ const customStyles = {
   }),
 };
 
-const SelectPackage = ({ name, options, placeholder, label }) => {
+const SelectPackage = ({ name, options, placeholder, label, defaultInputValue = '' }) => {
   return (
     <Wrapper>
       <Label>{label}</Label>
-      <Select name={name} options={options} styles={customStyles} placeholder={placeholder} />
+      <Select name={name} defaultInputValue={defaultInputValue} options={options} styles={customStyles} placeholder={placeholder} />
     </Wrapper>
   );
 };
