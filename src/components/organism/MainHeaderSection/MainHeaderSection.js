@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { MainTitle } from 'components/atoms/MainTitle/MainTitle';
 import { StyledList, StyledListItem, Wrapper, StyledButton } from './MainHeaderSection.styles';
 import { Button } from 'components/atoms/Button/Button';
 import { Link } from 'react-router-dom';
 import { resetScroll } from '../../../utilities/resetScroll';
+import { AppContext } from '../../../AppContext';
 
 const MainHeaderSection = () => {
+  const { setPackageSelection } = useContext(AppContext);
   return (
     <Wrapper>
       <MainTitle>
@@ -19,7 +21,15 @@ const MainHeaderSection = () => {
         <StyledListItem>5-letnie doświadczenie w prowadzeniu kampani e-marketingowych</StyledListItem>
       </StyledList>
       <div>
-        <StyledButton isPrimary>Testowa kampania</StyledButton>
+        <Link
+          to="/contact"
+          onClick={() => {
+            resetScroll();
+            setPackageSelection('Test');
+          }}
+        >
+          <StyledButton isPrimary>Testowa kampania</StyledButton>
+        </Link>
         <Link to="/contact" onClick={resetScroll}>
           <Button>Mam pytanie</Button>
         </Link>

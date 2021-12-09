@@ -13,7 +13,6 @@ export const AppContextProvider = ({ children }) => {
   const [packageSelection, setPackageSelection] = useState('');
   const [numberOfCampaignsSelection, setNumberOfCampaignsSelection] = useState('1-2');
   const [campaignBudgetSelection, setCampaignBudgetSelection] = useState('100-500');
-
   return (
     <AppContext.Provider
       value={{

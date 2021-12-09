@@ -1,8 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 import { Label } from '../../atoms/Label/Label';
 import Select from 'react-select';
-import { AppContext } from '../../../AppContext';
 
 const Wrapper = styled.div`
   display: flex;
@@ -26,13 +25,11 @@ const customStyles = {
   }),
 };
 
-const SelectPackage = ({ name, options, placeholder, label }) => {
-  const { packageSelection } = useContext(AppContext);
-
+const SelectPackage = ({ name, options, placeholder, label, defaultInputValue = '' }) => {
   return (
     <Wrapper>
       <Label>{label}</Label>
-      <Select name={name} defaultInputValue={packageSelection} options={options} styles={customStyles} placeholder={placeholder} />
+      <Select name={name} defaultInputValue={defaultInputValue} options={options} styles={customStyles} placeholder={placeholder} />
     </Wrapper>
   );
 };

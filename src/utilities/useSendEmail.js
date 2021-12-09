@@ -1,9 +1,18 @@
 import emailjs from 'emailjs-com';
-import { useRef, useState } from 'react';
+import { useContext, useRef, useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { AppContext } from '../AppContext';
 
 export const useSendEmail = () => {
   const [isSend, setIsSend] = useState(false);
+  const { setPackageSelection } = useContext(AppContext);
   const form = useRef();
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm();
 
   const sendEmail = (template, form) => {
     emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, template, form.current, process.env.REACT_APP_USER_ID).then(
@@ -18,5 +27,12 @@ export const useSendEmail = () => {
     );
   };
 
-  return { form, sendEmail, isSend };
+  const onSubmit = (template, form) => {
+    sendEmail(template, form);
+    setPackageSelection('');
+
+    reset();
+  };
+
+  return { form, isSend, register, handleSubmit, formState: { errors }, reset, onSubmit };
 };
