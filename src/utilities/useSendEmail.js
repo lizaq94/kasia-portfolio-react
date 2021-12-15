@@ -5,7 +5,7 @@ import { AppContext } from '../AppContext';
 
 export const useSendEmail = () => {
   const [isSend, setIsSend] = useState(false);
-  const { setPackageSelection } = useContext(AppContext);
+  const { setPackageSelection, setNumberOfCampaignsSelection, setCampaignBudgetSelection } = useContext(AppContext);
   const form = useRef();
   const {
     register,
@@ -30,7 +30,8 @@ export const useSendEmail = () => {
   const onSubmit = (template, form) => {
     sendEmail(template, form);
     setPackageSelection('');
-
+    setNumberOfCampaignsSelection('');
+    setCampaignBudgetSelection('');
     reset();
   };
 

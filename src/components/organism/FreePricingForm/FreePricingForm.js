@@ -86,6 +86,7 @@ const FreePricingForm = () => {
             handleInputChange={setNumberOfCampaignsSelection}
             isWhite
             register={register}
+            defaultCheckedValue="1-2"
           />{' '}
           <PackageSelectionBar
             name={'campaignBudgetSelectBar'}
@@ -95,6 +96,7 @@ const FreePricingForm = () => {
             handleInputChange={setCampaignBudgetSelection}
             isWhite
             register={register}
+            defaultCheckedValue="100-500"
           />
         </>
       )}

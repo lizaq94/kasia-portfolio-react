@@ -61,6 +61,7 @@ const ContactForm = () => {
           handleInputChange={setPackageSelection}
           value={packageSelection}
           register={register}
+          defaultCheckedValue="Test"
         />
       )}
 
