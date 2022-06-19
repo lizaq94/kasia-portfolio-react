@@ -24,7 +24,7 @@ const PriceListPage = () => {
   return (
     <Wrapper>
       <ViewWrapper>
-        <HeaderSection title={'Cennik kampani reklamowych na\nfacebooku i instagramie'}>
+        <HeaderSection title={'Cennik kampani reklamowych na\nFacebooku i Instagramie'}>
           <HeaderParagraph>
             Nie jesteś przekonana/y do kampanii w social w mediach, nie wiesz czy sprawdzą się w przypadku Twojej marki? Wybierz nasz pakiet TEST -
             pojedyncza kampania z darmową aktywacją.

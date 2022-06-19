@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { Button } from 'components/atoms/Button/Button';
+import backgroundImage from 'assets/image/background-image.png';
 
 export const Wrapper = styled.div`
   width: 100%;
@@ -7,6 +8,11 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-image: url(${backgroundImage});
+
+  @media (max-width: 1024px) {
+    background-image: unset;
+  }
 
   @media (max-width: 700px) {
     padding: 10rem 5rem;
@@ -27,8 +33,7 @@ export const StyledList = styled.ul`
 export const StyledListItem = styled.li`
   font-size: ${({ theme }) => theme.fontSize.m};
   font-weight: 400;
-  line-height: 2rem;
-  letter-spacing: -0.03em;
+  line-height: 1.6rem;
   margin-bottom: 2.4rem;
 
   @media (max-width: 425px) {

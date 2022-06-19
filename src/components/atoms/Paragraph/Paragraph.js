@@ -9,8 +9,8 @@ export const Paragraph = styled.p`
 
 export const InfoParagraph = styled(Paragraph)`
   font-weight: 600;
-  font-size: 3.6rem;
-  line-height: 6.4rem;
+  font-size: 3rem;
+  line-height: 6rem;
   letter-spacing: -0.03em;
   margin: 3rem 0;
 

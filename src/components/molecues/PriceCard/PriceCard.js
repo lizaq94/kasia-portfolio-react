@@ -26,6 +26,7 @@ const PriceCard = ({ value = priceIndividual, isPrice }) => {
       <CardItem label={'Liczba Kampanii'} value={value.numberCampaigns} />
       <CardItem label={'Sugerowany budżet'} value={value.budget} />
       <CardItem label={'Czas Trwania'} value={value.duration} />
+      <CardItem label={'Prowizja'} value={value.provision} />
       <Link
         to="/contact"
         onClick={() => {

@@ -23,7 +23,7 @@ export const Wrapper = styled.div`
 `;
 
 export const StyledLogo = styled(NavLink)`
-  font-size: 2.4rem;
+  font-size: 1.6rem;
   font-weight: 600;
   line-height: 2.4rem;
   letter-spacing: -0.03em;
@@ -31,6 +31,13 @@ export const StyledLogo = styled(NavLink)`
   text-decoration: none;
   color: black;
   transition: transform 0.2s linear;
+  display: flex;
+  flex-direction: column;
+
+  span {
+    font-weight: 700;
+    font-size: 2.4rem;
+  }
 
   &:hover {
     transform-origin: center;

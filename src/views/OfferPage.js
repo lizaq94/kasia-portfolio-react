@@ -12,7 +12,7 @@ const OfferPage = () => {
   return (
     <>
       <ViewWrapper>
-        <HeaderSection title={'Kampanie reklamowe na \n facebooku i instagramie'} isButton={'Zobacz cennik'} pathButton={'/price'}>
+        <HeaderSection title={'Kampanie reklamowe na \n Facebooku i Instagramie'} isButton={'Zobacz cennik'} pathButton={'/price'}>
           <HeaderParagraph>
             System reklamowy Facebook jest potężnym narzędziem, który <br /> pozwala osiągnąć cele biznesowe na wielu różnych płaszczyznach.
           </HeaderParagraph>
@@ -26,7 +26,7 @@ const OfferPage = () => {
       <ViewWrapper>
         <InfoSection buttonText={'Dowiedz się więcej'} pathButton={'/contact'}>
           <InfoParagraph>Nie jesteś przekonana/y do kampanii w social w mediach, nie wiesz czy sprawdzą się w przypadku Twojej marki?</InfoParagraph>
-          <InfoParagraph>Wybierz nasz pakiet TEST -pojedyncza kampania z darmową aktywacją.</InfoParagraph>
+          <InfoParagraph>Wybierz nasz pakiet TEST - pojedyncza kampania z darmową aktywacją.</InfoParagraph>
         </InfoSection>
       </ViewWrapper>
     </>

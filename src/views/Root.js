@@ -11,6 +11,7 @@ import PriceListPage from './PriceListPage';
 import ContactPage from './ContactPage';
 import FreePricingPage from './FreePricingPage';
 import { AppContextProvider } from '../AppContext';
+import PrivacyPolicy from './PrivacyPolicy';
 
 const Root = () => {
   return (
@@ -37,6 +38,9 @@ const Root = () => {
               </Route>
               <Route path="/free-pricing">
                 <FreePricingPage />
+              </Route>
+              <Route path="/privacy-policy">
+                <PrivacyPolicy />
               </Route>
             </Switch>
           </AppContextProvider>

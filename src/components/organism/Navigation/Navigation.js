@@ -17,7 +17,10 @@ const Navigation = () => {
         <span />
       </SidebarButton>
       <Wrapper>
-        <StyledLogo to="/">Kasia Domagała</StyledLogo>
+        <StyledLogo to="/">
+          <span>Kasia Domagała</span>
+          Digital Marketing Manager
+        </StyledLogo>
         <StyledNav>
           <StyledLink to="/about">O mnie</StyledLink>
           <StyledLink to="/offer">Oferta</StyledLink>

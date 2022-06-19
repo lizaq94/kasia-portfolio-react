@@ -118,6 +118,7 @@ const FreePricingForm = () => {
         register={register}
         isRequired
         errors={errors}
+        srcForLabel="/privacy-policy"
       />
       <Checkbox name={'marketingAgree'} id={'marketingAgree'} label={'Wyrażam zgodę na kontakt marketingowy'} register={register} />
 

@@ -14,7 +14,7 @@ const StyledHeaderParagraph = styled(HeaderParagraph)`
 const ContactPage = () => {
   return (
     <ViewWrapper>
-      <HeaderSection title={'Współpracuj zdalnie z firmami\nz całej Polski'}></HeaderSection>
+      <HeaderSection title={'Współpracuję zdalnie z firmami\nz całej Polski'} />
       <StyledHeaderParagraph>
         Masz pytanie? Napisz! Wypełnij poniższy formularz lub wyślij maila na: <br /> katarz.domagala@gmail.com
       </StyledHeaderParagraph>

@@ -21,7 +21,7 @@ const Footer = ({ year }) => {
         <StyledLink onClick={resetScroll} to="/contact">
           Kontakt
         </StyledLink>
-        <StyledLink onClick={resetScroll} to="#">
+        <StyledLink onClick={resetScroll} to="/privacy-policy">
           Polityka prywatnosci
         </StyledLink>
         <StyledLink onClick={resetScroll} to="/free-pricing">

@@ -22,4 +22,9 @@ export const GlobalStyle = createGlobalStyle`
     a, button {
         font-family: 'Sofia Pro', sans-serif;
     }
+    
+    a {
+      color: ${({ theme }) => theme.colors.primaryBlue};
+    }
+    
 `;

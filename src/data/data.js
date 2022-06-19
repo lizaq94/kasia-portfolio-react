@@ -6,8 +6,9 @@ export const priceCardsInfo = [
     activationFee: '0zł',
     numberCampaigns: '1',
     budget: '100-200zł',
-    duration: '2 Tygodnie',
+    duration: '1 tydzień',
     value: 'Test',
+    provision: '0%',
   },
   {
     id: 1,
@@ -18,6 +19,7 @@ export const priceCardsInfo = [
     budget: '200-500zł',
     duration: 'Dowolny',
     value: 'Start',
+    provision: '10%',
   },
   {
     id: 2,
@@ -28,6 +30,7 @@ export const priceCardsInfo = [
     budget: '500-2000zł',
     duration: 'Dowolny',
     value: 'Plus',
+    provision: '15%',
   },
 ];
 
@@ -39,4 +42,5 @@ export const priceIndividual = {
   budget: '-',
   duration: '-',
   value: 'Indywidualny',
+  provision: '19%',
 };
