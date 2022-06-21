@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/kasia-portfolio-react/static/css/main.2d0d835e.css",
+    "main.js": "/kasia-portfolio-react/static/js/main.ff1d8fe2.js",
+    "static/media/an.svg": "/kasia-portfolio-react/static/media/an.ac2a8face7429c509c45f56a7f68ddd2.svg",
+    "static/media/background-image.png": "/kasia-portfolio-react/static/media/background-image.aee38c52731cf12d4ece.png",
+    "static/media/insta.svg": "/kasia-portfolio-react/static/media/insta.825ab95374ec4dd9c27b858310d8220f.svg",
+    "static/media/people-icon.svg": "/kasia-portfolio-react/static/media/people-icon.4b75d344dc4888763ec895601e80c8f8.svg",
+    "static/media/fb.svg": "/kasia-portfolio-react/static/media/fb.86a024f3cc584d5adbffff5d79cce4a2.svg",
+    "static/media/likes-icon.svg": "/kasia-portfolio-react/static/media/likes-icon.79ae1c726632e73ca84fed79ca3bb5b5.svg",
+    "static/media/client-icon.svg": "/kasia-portfolio-react/static/media/client-icon.10c937e20d7aa8245c78b6fa62a397bd.svg",
+    "static/media/sale-icon.svg": "/kasia-portfolio-react/static/media/sale-icon.dad71918c1d30bae1a23f5dd0bfadac5.svg",
+    "static/media/cart-icon.svg": "/kasia-portfolio-react/static/media/cart-icon.87d0e13611e7f7410c61ad30ffd3a086.svg",
+    "static/media/incresase-icon.svg": "/kasia-portfolio-react/static/media/incresase-icon.1729ec67981cad8e5358d59a77185b6d.svg",
+    "static/media/increase-icon.svg": "/kasia-portfolio-react/static/media/increase-icon.9007aa645b80ad60903f567258aaaed8.svg",
+    "static/media/stars-icon.svg": "/kasia-portfolio-react/static/media/stars-icon.6099278e3aaaa8e4e49298489cee2f94.svg",
+    "static/media/small-star-icon.svg": "/kasia-portfolio-react/static/media/small-star-icon.43736b77080e443ab8445640dc31190c.svg",
+    "static/media/like-icon.svg": "/kasia-portfolio-react/static/media/like-icon.05ea662f778f21a489145422305228c2.svg",
+    "static/media/laptop-icon.svg": "/kasia-portfolio-react/static/media/laptop-icon.ca8aa50090c768d4fb9996a56bc96596.svg",
+    "index.html": "/kasia-portfolio-react/index.html",
+    "static/media/small-like-icon.svg": "/kasia-portfolio-react/static/media/small-like-icon.a4dec78623bfacd2fc2ce951a8e539c5.svg",
+    "static/media/message-icon.svg": "/kasia-portfolio-react/static/media/message-icon.eb47d70c5778f9a181fe41ed700043b6.svg",
+    "static/media/messenger.svg": "/kasia-portfolio-react/static/media/messenger.6897a54624895985bef022c5d4bd3652.svg",
+    "static/media/play-icon.svg": "/kasia-portfolio-react/static/media/play-icon.a17e14863c2482b7e9c58418dd941bf8.svg",
+    "main.2d0d835e.css.map": "/kasia-portfolio-react/static/css/main.2d0d835e.css.map",
+    "main.ff1d8fe2.js.map": "/kasia-portfolio-react/static/js/main.ff1d8fe2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.2d0d835e.css",
+    "static/js/main.ff1d8fe2.js"
+  ]
+}
