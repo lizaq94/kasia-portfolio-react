@@ -21,7 +21,7 @@ const Root = () => {
         <MainTemplate>
           <AppContextProvider>
             <Switch>
-              <Route exact path="/">
+              <Route exact path="/kasia-portfolio-react">
                 <HomePage />
               </Route>
               <Route path="/about">

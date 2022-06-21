@@ -17,7 +17,7 @@ const Navigation = () => {
         <span />
       </SidebarButton>
       <Wrapper>
-        <StyledLogo to="/">
+        <StyledLogo to="/kasia-portfolio-react">
           <span>Kasia Domagała</span>
           Digital Marketing Manager
         </StyledLogo>
