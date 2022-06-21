@@ -2,24 +2,26 @@ import React, { useContext } from 'react';
 import { Button } from 'components/atoms/Button/Button';
 import CardItem from 'components/atoms/CardItem/CardItem';
 import { priceIndividual } from 'data/data';
-import { Wrapper, Title, PriceItem, PriceItemBig } from './PriceCard.styles.js';
+import { Wrapper, Title, PriceItem, PriceItemBig, ProvisionElement } from './PriceCard.styles.js';
 import { Link } from 'react-router-dom';
 import { AppContext } from '../../../AppContext';
 import { resetScroll } from '../../../utilities/resetScroll';
 
 const PriceCard = ({ value = priceIndividual, isPrice }) => {
   const { setPackageSelection } = useContext(AppContext);
-
+  console.log(value);
   return (
     <Wrapper>
       <Title>Pakiet {value.name}</Title>
       {isPrice ? (
         <PriceItemBig>
           <span>{value.price}</span>/msc (Netto)
+          {value.elementUnderPrice && <ProvisionElement>{value.elementUnderPrice}</ProvisionElement>}
         </PriceItemBig>
       ) : (
         <PriceItem>
           <span>Ustalana indywidualnie</span>/msc (Netto)
+          {value.elementUnderPrice && <ProvisionElement>{value.elementUnderPrice}</ProvisionElement>}
         </PriceItem>
       )}
       <CardItem label={'Jednorazowa opłata aktywacyjna'} value={value.activationFee} />

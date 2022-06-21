@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   border-radius: 2.4rem;
   padding: 3.2rem 2.4rem 2.4rem 2.4rem;
   margin-right: 2rem;
-  box-shadow: 0px 15px 94px -20px rgba(20, 29, 74, 0.24);
+  box-shadow: 0 15px 94px -20px rgba(20, 29, 74, 0.24);
 
   @media (max-width: 1024px) {
     padding: 2.2rem 1.4rem 1.4rem 1.4rem;
@@ -44,13 +44,15 @@ export const Title = styled.div`
   }
 `;
 export const PriceItem = styled.div`
+  position: relative;
+  align-self: center;
   font-size: 1.6rem;
   display: flex;
   align-items: center;
-  padding-bottom: 4.8rem;
+  padding-bottom: 4rem;
 
   @media (max-width: 1024px) {
-    padding-bottom: 2rem;
+    padding-bottom: 2.5rem;
   }
   @media (max-width: 425px) {
     justify-content: center;
@@ -87,5 +89,19 @@ export const PriceItemBig = styled(PriceItem)`
       padding-right: 1rem;
       font-size: 3.5rem;
     }
+  }
+`;
+
+export const ProvisionElement = styled.div`
+  font-size: 1.6rem;
+  color: ${({ theme }) => theme.colors.primaryBlue};
+  position: absolute;
+  top: 55px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  @media (max-width: 1024px) {
+    top: 50px;
   }
 `;

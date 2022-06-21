@@ -9,7 +9,7 @@ import { AppContext } from '../../../AppContext';
 const MainHeaderSection = () => {
   const { setPackageSelection } = useContext(AppContext);
   return (
-    <Wrapper>
+    <Wrapper imgUrl={process.env.PUBLIC_URL + '/background-image.png'}>
       <MainTitle>
         Kampania reklamowa na Facebooku <br /> i Instagramie dla małych firm
       </MainTitle>
