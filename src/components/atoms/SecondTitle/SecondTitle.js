@@ -13,6 +13,9 @@ export const SecondTitle = styled.h2`
     font-size: 3.2rem;
     line-height: 5rem;
   }
+  @media (min-width: 700px) and (max-width: 1024px) {
+    padding: 0 2rem;
+  }
 `;
 
 export const SecondTitleLowerCase = styled(SecondTitle)`

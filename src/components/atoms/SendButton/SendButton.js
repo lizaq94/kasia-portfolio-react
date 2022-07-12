@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   justify-content: center;
 
   ${Button} {
-    width: 22.7rem;
+    width: 18rem;
     display: flex;
     justify-content: center;
     align-items: center;
